@@ -6,7 +6,7 @@ SELECT location, date, total_cases, population, (total_cases/population)*100 as 
 WHERE location like '%states%'
 ORDER BY 1,2
 
---Countries with highest infection rate vs pop
+--Countries with highest infection rate vs population
 SELECT location, population, MAX(total_cases) as HighestInfectionCount,  
 MAX((total_cases/population))*100 as InfectionPerc FROM PortfolioProject..CovidDeaths
 GROUP BY location, population
